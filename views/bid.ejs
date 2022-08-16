@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Enter your bid</title>
+  </head>
+  <body>
+    <h1>Welcome, <%=userName%>!</h1>
+    <p>Highest bid is: <%=highestBid%></p>
+    <% if (areYouHighest) { %>
+    <p>You are the higest bidder!</p>
+    <% } else { %>
+    <p>You are not the higest bidder.</p>
+    <% } %>
+    <form action="/bid" method="post">
+      <label>Enter your bid:</label>
+      <input type="text" name="bid" value="<%=currentBid%>" />
+      <input type="submit" value="Bid" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Enter your bid</title>
+  </head>
+  <body>
+    <h2>Please login</h2>
+
+    <p>
+      <button onclick="handleLogin(this)">Log in with Facebook</button>
+    </p>
+
+    <form id="login-form" method="post" action="/login" >
+      <input type="hidden" name="access_token" />
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '<App ID>',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v14.0'
+        });
+      };
+    </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script type="text/javascript" src="/script.js"></script>
+  </body>
+</html>
